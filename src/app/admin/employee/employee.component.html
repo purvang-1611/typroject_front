@@ -26,40 +26,10 @@
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
   </mat-form-field>
-  <!-- <table mat-table
-    [dataSource]="dataSourceofEmployee" multiTemplateDataRows
-    class="mat-elevation-z8">
-<ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumnsofEmployee">
- <th mat-header-cell *matHeaderCellDef> {{column}} </th>
- <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-</ng-container>
 
-
-<ng-container matColumnDef="expandedDetail">
- <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumnsofEmployee.length">
-   <div class="example-element-detail"
-        [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-     <div class="example-element-diagram">
-      <img src="http://localhost:3000/images/Emp_images/{{element.EmpIMG}}" height="200px:" width="150">
-     </div>
-     <div class="example-element-description">
-       {{element.EmpMOBILE}}
-     </div>
-   </div>
- </td>
-</ng-container>
-
-<tr mat-header-row *matHeaderRowDef="displayedColumnsofEmployee"></tr>
-<tr mat-row *matRowDef="let element; columns: displayedColumnsofEmployee;"
-   class="example-element-row"
-   [class.example-expanded-row]="expandedElement === element"
-   (click)="expandedElement = element">
-</tr>
-<tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
-</table> -->
   <table mat-table [dataSource]="dataSourceofEmployee" class="mat-elevation-z8" matSort multiTemplateDataRows>
     <ng-container matColumnDef="checkbox">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> all </th>
+      <th mat-header-cell *matHeaderCellDef > all </th>
       <td mat-cell *matCellDef="let element">
         <mat-checkbox (change)="onCheckchange(element)" color="warn"></mat-checkbox>
       </td>
@@ -94,10 +64,7 @@
 
       </td>
     </ng-container>
-    <!--<ng-container matColumnDef="expandedDetail">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile No </th>
-                  <td mat-cell *matCellDef="let element"> {{element.EmpMOBILE}} </td>
-                </ng-container>-->
+
     <ng-container matColumnDef="expandedDetail">
       <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumnsofEmployee.length">
         <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">

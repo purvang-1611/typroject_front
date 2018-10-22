@@ -79,8 +79,15 @@ imageFlag:boolean=false;
     }
   }
 
-  onAddPicture(value){
-    this.imageFlag=true;
+  onSelectPicture(value){
+
     this.selectedProfilePhoto=<File>value.target.files[0];
+    if(this.selectedProfilePhoto){
+      this.imageFlag=true;
+    }
+
+  }
+  OnClickCancle(){
+    this._send.navigate(['/employee']);
   }
 }

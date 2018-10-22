@@ -12,6 +12,9 @@ import { EmployeeComponent } from './admin/employee/employee.component';
 import { AddnewEmployeeComponent } from './admin/employee/addnew-employee/addnew-employee.component';
 import { routing } from './app.routing';
 import { UpdateEmployeeComponent } from './admin/employee/update-employee/update-employee.component';
+import { ItemComponent } from './admin/item/item.component';
+import { AddItemComponent } from './admin/Item/add-item/add-item.component';
+import { UpdateItemComponent } from './admin/Item/update-item/update-item.component';
 
 
 
@@ -21,7 +24,10 @@ import { UpdateEmployeeComponent } from './admin/employee/update-employee/update
     CategoryComponent,
     EmployeeComponent,
     AddnewEmployeeComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    ItemComponent,
+    AddItemComponent,
+    UpdateItemComponent
   ],
   imports: [
     BrowserModule,

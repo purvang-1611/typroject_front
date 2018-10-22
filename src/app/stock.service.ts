@@ -4,11 +4,11 @@ import { HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryService {
-  item_url:string="http://localhost:3000/category/";
-
+export class StockService {
+  private stock_url:string="http://localhost:3000/stock/";
   constructor(private _http:HttpClient) { }
-  getAllCategory(){
-    return this._http.get(this.item_url);
+
+  getAllStock(){
+    return this._http.get(this.stock_url);
   }
 }
