@@ -47,6 +47,7 @@ expandedElement;
     );
   }
   onDeleteOneItem(item){
+    if(confirm("Are you sure you want to delete?")){
     this._item.deleteOneItem(item.itemID).subscribe(
       (data:any)=>{
         if(this.itemarr.find(x=>x.itemID==item.itemID)){
@@ -55,6 +56,7 @@ expandedElement;
         this.dataSourceofItem.data=this.itemarr;
       }
     );
+    }
   }
   onAddnewItem(){
     this._send.navigate(['/addnewitem']);
@@ -70,6 +72,9 @@ expandedElement;
     else{
       this.delitem.push(element);
     }
+  }
+  onDetails(itemID:number){
+   this._send.navigate(['/itemdetails',itemID]);
   }
   applyFilter(filterValue: string) {
     this.dataSourceofItem.filter = filterValue.trim().toLowerCase();

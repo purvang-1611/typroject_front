@@ -56,7 +56,7 @@ selectedFile:File=null;
         this.ingredientnamearr=data;
       }
     );
-    for(let j=20;j<100;j=j+10){
+    for(let j=20;j<100;j=j+5){
       this.itemPREPARETIMEarr.push(j);
     }
       for(let i=1;i<30;i++){
@@ -74,9 +74,11 @@ selectedFile:File=null;
       }
   }
   onAddIngredients(){
-    this.itemINGREDIENTSDETAIL.push(new IngredientsDetail(this.itemINGREDIENTSNAME,this.itemINGREDIENTSUnit));
-    this.dataSourceOfIngredient.data=this.itemINGREDIENTSDETAIL;
     this.ingredientsobj=this.ingredientnamearr.find(x=>x.stockNAME==this.itemINGREDIENTSNAME);
+
+    this.itemINGREDIENTSDETAIL.push(new IngredientsDetail(this.ingredientsobj.stockID,this.itemINGREDIENTSNAME,this.itemINGREDIENTSUnit));
+    this.dataSourceOfIngredient.data=this.itemINGREDIENTSDETAIL;
+
     this.itemINGREDIENTS+=this.ingredientsobj.stockID+"|"+this.itemINGREDIENTSUnit+"|";
     this.ingredientnamearr.splice(this.ingredientnamearr.indexOf(this.ingredientsobj),1);
     this.itemINGREDIENTSNAME="";

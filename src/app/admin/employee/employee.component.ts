@@ -55,6 +55,7 @@ expandedElement;
     );
   }
   onDeleteOneEmployee(item){
+    if(confirm("Are you sure you want to delete?")){
     this._emp.deleteOneEmployee(item.EmpID).subscribe(
       (data:any)=>{
         if(this.Employeearr.find(x=>x.EmpID==item.EmpID)){
@@ -63,6 +64,7 @@ expandedElement;
         this.dataSourceofEmployee.data=this.Employeearr;
       }
     );
+    }
   }
   onAddnewEmployee(){
     this._send.navigate(['/addnewemployee']);

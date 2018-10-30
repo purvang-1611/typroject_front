@@ -15,6 +15,9 @@ import { UpdateEmployeeComponent } from './admin/employee/update-employee/update
 import { ItemComponent } from './admin/item/item.component';
 import { AddItemComponent } from './admin/Item/add-item/add-item.component';
 import { UpdateItemComponent } from './admin/Item/update-item/update-item.component';
+import { ItemDetailsComponent } from './admin/item/item-details/item-details.component';
+import { StockComponent } from './admin/stock/stock.component';
+import { UpdateStockComponent } from './admin/stock/update-stock/update-stock.component';
 
 
 
@@ -27,7 +30,10 @@ import { UpdateItemComponent } from './admin/Item/update-item/update-item.compon
     UpdateEmployeeComponent,
     ItemComponent,
     AddItemComponent,
-    UpdateItemComponent
+    UpdateItemComponent,
+    ItemDetailsComponent,
+    StockComponent,
+    UpdateStockComponent
   ],
   imports: [
     BrowserModule,

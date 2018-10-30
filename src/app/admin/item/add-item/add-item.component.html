@@ -96,6 +96,14 @@
           </div>
         </div>
       </div>
+      <br>
+      <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4"><mat-label><b>Ingredients Used:</b></mat-label></div>
+      </div>
+    </div>
+    <br>
       <div class="container">
         <table mat-table [dataSource]="dataSourceOfIngredient" class="mat-elevation-z8">
 
@@ -121,7 +129,7 @@
         <mat-form-field class="example-full-width">
           <mat-select placeholder="Category" [(ngModel)]="CategoryID" name="CategoryID" required>
             <mat-option *ngFor="let item of categoryarr" [value]="item.CategoryID" value="item.categoryID">
-              {{item.CategoryID}}. {{item.CategoryNAME}}
+              {{item.CategoryNAME}}
             </mat-option>
           </mat-select>
         </mat-form-field>
